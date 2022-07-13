@@ -1,0 +1,16 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { font-family: FSJoey-Bold; text-transform: uppercase; color: #004898;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { margin-bottom: .5rem; font-weight: 500; line-height: 1.2;}
+.h4, h4 { font-size: 2.5rem;}
+.h5, h5 { font-size: 2rem;}
+
+.container { font-family: "FsJoey-Regular";}
+.d-none { display: none !important;}
+.sy-box { position: relative;}
+.sy-pager { position: absolute; bottom: 15px; z-index: 33;}
+.sy-pager li { border: 1px solid #0233a0; padding: 2px;}
+.sy-pager li a { background-color: #fff;}
+.sy-pager li.sy-active a { background-color: #0233a0;}
+ 
+ul li {
+ list-style-type: none;
+}

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'FSJoey-Bold';
+    src: url('fonts/FSJoey-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FSJoey-Heavy';
+    src: url('fonts/FSJoey-Heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FSJoey-Light';
+    src: url('fonts/FSJoey-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FSJoey-Medium';
+    src: url('fonts/FSJoey-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FSJoey-Regular';
+    src: url('fonts/FSJoey-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*******************************************/
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************/
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('fonts/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Barlow-Medium';
+    src: url('fonts/Barlow-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Barlow-Bold';
+    src: url('fonts/Barlow-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Barlow-Light';
+    src: url('fonts/Barlow-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

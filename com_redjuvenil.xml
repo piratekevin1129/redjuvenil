@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>Red Juvenil Seguros SURA</name>
+	<creationDate>Julio 2022</creationDate>
+	<author>Virtual Colors S.A.S</author>
+	
+	<authorUrl>http://www.segurossura.com.co</authorUrl>
+	
+	<version>0.0.1</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Componente de red juvenil para seguros sura</description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>redjuvenil.php</filename>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>public</folder>
+	</files>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com_redjuvenil'>Red Juvenil Seguros SURA</menu>
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>controller.php</filename>
+			<filename>redjuvenil.php</filename>
+			<filename>index.html</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+		</files>
+	</administration>
+
+</extension>
