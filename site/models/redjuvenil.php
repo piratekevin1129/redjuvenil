@@ -5,8 +5,8 @@ defined ('_JEXEC') or die ("Acceso restringido");
 jimport('joomla.application.component.modelitem');
 
 //definimos la clase con el nombre del componente con la primera en mayuscula
-class RedjuvenilModelRedjuvenil extends JModelList{
-    public function getItems($table,$fields,$r,$d,$c,$n){
+class RedjuvenilModelRedjuvenil extends JModelItem{
+    public function getColegios($table,$fields,$r,$d,$c,$n){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 

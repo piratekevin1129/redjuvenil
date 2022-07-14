@@ -9,33 +9,65 @@ var k = 0;
 function resetResults(key){
     getE('dpe-'+key+'-results').innerHTML = ''
 }
+function inArray(haystack,needle){
+    var is_in_array = false
+    for(var e = 0;e<haystack.length;e++){
+        if(haystack[e]==needle){
+            is_in_array = true
+        }
+    }
+    return is_in_array
+}
 function updateResults(key,values){
     var html = ''
-    if(key=='departamento'){
+    var repetidos = []
+
+    if(key=='regional'){
+        for(i = 0;i<items_data;i++){
+            var item_data = items_data[i]
+            console.log(item_data.regional)
+            if(!inArray(repetidos,item_data.regional)){
+                html+='<div class="dpe-buscador-result" tag="'+setMinuscula(String(item_data.regional).toLowerCase())+'" value="'+item_data.regional+'" onclick="clickItemBuscador('+item_data.id+',this,'+"'regional'"+')">'
+                    html+='<p>'+item_data.regional+'</p>'
+                html+='</div>'
+                repetidos.push(item_data.regional)
+            }
+        }
+        console.log(repetidos)
+    }else if(key=='departamento'){
         for(i = 0;i<items_data;i++){
             var item_data = items_data[i]
             if(item_data.regional==values[0]){
-                html+='<div class="dpe-buscador-result" tag="'+setMinuscula(String(item_data.departamento).toLowerCase())+'" value="'+item_data.departamento+'" onclick="clickItemBuscador('+item_data.id+',this,'+"'departamento'"+')">'
-                    html+='<p>'+item_data.departamento+'</p>'
-                html+='</div>'
+                if(!inArray(repetidos,item_data.departamento)){
+                    html+='<div class="dpe-buscador-result" tag="'+setMinuscula(String(item_data.departamento).toLowerCase())+'" value="'+item_data.departamento+'" onclick="clickItemBuscador('+item_data.id+',this,'+"'departamento'"+')">'
+                        html+='<p>'+item_data.departamento+'</p>'
+                    html+='</div>'
+                    repetidos.push(item_data.departamento)
+                }
             }
         }
     }else if(key=='ciudad'){
         for(i = 0;i<items_data;i++){
             var item_data = items_data[i]
             if(item_data.departamento==values[0]){
-                html+='<div class="dpe-buscador-result" tag="'+setMinuscula(String(item_data.ciudad).toLowerCase())+'" value="'+item_data.ciudad+'" onclick="clickItemBuscador('+item_data.id+',this,'+"'ciudad'"+')">'
-                    html+='<p>'+item_data.ciudad+'</p>'
-                html+='</div>'
+                if(!inArray(repetidos,item_data.ciudad)){
+                    html+='<div class="dpe-buscador-result" tag="'+setMinuscula(String(item_data.ciudad).toLowerCase())+'" value="'+item_data.ciudad+'" onclick="clickItemBuscador('+item_data.id+',this,'+"'ciudad'"+')">'
+                        html+='<p>'+item_data.ciudad+'</p>'
+                    html+='</div>'
+                    repetidos.push(item_data.ciudad)
+                }
             }
         }
     }else if(key=='nombre'){
         for(i = 0;i<items_data;i++){
             var item_data = items_data[i]
             if(item_data.ciudad==values[0]){
-                html+='<div class="dpe-buscador-result" tag="'+setMinuscula(String(item_data.nombre).toLowerCase())+'" value="'+item_data.nombre+'" onclick="clickItemBuscador('+item_data.id+',this,'+"'nombre'"+')">'
-                    html+='<p>'+item_data.nombre+'</p>'
-                html+='</div>'
+                if(!inArray(repetidos,item_data.nombre)){
+                    html+='<div class="dpe-buscador-result" tag="'+setMinuscula(String(item_data.nombre).toLowerCase())+'" value="'+item_data.nombre+'" onclick="clickItemBuscador('+item_data.id+',this,'+"'nombre'"+')">'
+                        html+='<p>'+item_data.nombre+'</p>'
+                    html+='</div>'
+                    repetidos.push(item_data.nombre)
+                }
             }
         }
     }
@@ -99,12 +131,14 @@ function selectItemBuscador(input,key){
     if(!isempty(texto)){
         getE('dpe-'+key+'-results').className = 'dpe-buscador-results-on'
     }
+    getE(key+'-field').classList.add('dpe-buscador-input-selected')
 }
 
-function cancelCiudad(key){
+function cancelItemBuscador(key){
     getE('dpe-'+key+'-value').value = ''
     getE('dpe-'+key+'-value2').value = ''
     getE('dpe-'+key+'-results').className = 'dpe-buscador-results-off'
+    getE(key+'-field').classList.remove('dpe-buscador-input-selected')
 }
 
 

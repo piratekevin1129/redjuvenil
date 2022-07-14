@@ -12,7 +12,7 @@ class RedjuvenilController extends JControllerLegacy{
 		$titles = array('id','regional','departamento','ciudad','tipo_identificacion','numero_identificacion','razon_social','nombre_comercial','especialidad','categoria','servicio','direccion','complemento_direccion','institucion','telefono','correo','sede_propia','fecha');
 		
 		$model = $this->getModel();
-		$datos = $model->getItems($tablename,$titles,$r,$d,$c,$n);
+		$datos = $model->getColegios($tablename,$titles,$r,$d,$c,$n);
 
 		$json_text = json_encode($datos, JSON_UNESCAPED_UNICODE);
 		

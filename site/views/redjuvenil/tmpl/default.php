@@ -37,9 +37,9 @@ function unsanitice($text){
 <script src="https://kit.fontawesome.com/a6f44a68f2.js" crossorigin="anonymous"></script>
 
 <!--Estilos propios-->
-<link href="<?php echo JURI::base(); ?>components/com_redjuvenil/public/assets/css/fonts.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo JURI::base(); ?>components/com_redjuvenil/public/assets/css/master.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo JURI::base(); ?>components/com_redjuvenil/public/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost/joomla/components/com_redjuvenil/public/assets/css/fonts.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost/joomla/components/com_redjuvenil/public/assets/css/master.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost/joomla/components/com_redjuvenil/public/assets/css/responsive.css" rel="stylesheet" type="text/css" />
 <script>
     function setMinuscula(str){
         var srt1 = str.replace(new RegExp('Á','g'),'á')
@@ -65,19 +65,14 @@ function unsanitice($text){
         <div class="dpe-form-group">
             <p class="dpe-buscador-label">Regional</p>
             <div class="dpe-buscador-input-cont">
-                <div class="dpe-buscador-input">
+                <div class="dpe-buscador-input" id="regional-field">
                     <div class="dpe-buscador-input-txt">
                         <input class="dpe-buscador-value" type="hidden" value="" id="dpe-regional-value" />
                         <input id="dpe-regional-value2" value="" placeholder="" type="text" maxlength="100" autocomplete="off" onkeyup="buscarItemBuscador(this,'regional')" onfocus="selectItemBuscador(this,'regional')" />
                         <button class="dpe-buscador-input-cancel" id="dpe-regional-input-cancel" onclick="cancelItemBuscador('regional')"><i class="fas fa-times"></i></button>
                     </div>
                     <div id="dpe-regional-results" class="dpe-buscador-results dpe-buscador-results-off">
-                        <?php for($i = 0;$i<count($this->items);$i++){?>
-                            <?php $item_data = (array) $this->items[$i]; ?>
-                            <div class="dpe-buscador-result" tag="<?php echo setMinuscula(strtolower($item_data['regional']))?>" value="<?php echo $item_data['regional']?>" onclick="clickItemBuscador(<?php echo $item_data['id']?>,this,'regional')">
-                                <p><?php echo $item_data['regional']?></p>
-                            </div>
-                        <?php }?>
+                        
                     </div>
                 </div>
             </div>
@@ -88,7 +83,7 @@ function unsanitice($text){
         <div class="dpe-form-group">
             <p class="dpe-buscador-label">Departamento</p>
             <div class="dpe-buscador-input-cont">
-                <div class="dpe-buscador-input">
+                <div class="dpe-buscador-input" id="departamento-field">
                     <div class="dpe-buscador-input-txt">
                         <input class="dpe-buscador-value" type="hidden" value="" id="dpe-departamento-value" />
                         <input id="dpe-departamento-value2" value="" placeholder="" type="text" maxlength="100" autocomplete="off" onkeyup="buscarItemBuscador(this,'departamento')" onfocus="selectItemBuscador(this,'departamento')" />
@@ -106,7 +101,7 @@ function unsanitice($text){
         <div class="dpe-form-group">
             <p class="dpe-buscador-label">Ciudad o municipio</p>
             <div class="dpe-buscador-input-cont">
-                <div class="dpe-buscador-input">
+                <div class="dpe-buscador-input" id="ciudad-field">
                     <div class="dpe-buscador-input-txt">
                         <input class="dpe-buscador-value" type="hidden" value="" id="dpe-ciudad-value" />
                         <input id="dpe-ciudad-value2" value="" placeholder="" type="text" maxlength="100" autocomplete="off" onkeyup="buscarItemBuscador(this,'ciudad')" onfocus="selectItemBuscador(this,'ciudad')" />
@@ -124,7 +119,7 @@ function unsanitice($text){
         <div class="dpe-form-group">
             <p class="dpe-buscador-label">Nombre / razón social</p>
             <div class="dpe-buscador-input-cont">
-                <div class="dpe-buscador-input">
+                <div class="dpe-buscador-input" id="nombre-field">
                     <div class="dpe-buscador-input-txt">
                         <input class="dpe-buscador-value" type="hidden" value="" id="dpe-nombre-value" />
                         <input id="dpe-nombre-value2" value="" placeholder="" type="text" maxlength="100" autocomplete="off" onkeyup="buscarItemBuscador(this,'nombre')" onfocus="selectItemBuscador(this,'nombre')" />
@@ -181,7 +176,7 @@ function unsanitice($text){
 <br />
 <br />
 
-<script src="<?php echo JURI::base(); ?>components/com_redjuvenil/public/assets/js/master.js"></script>
+<script src="http://localhost/joomla/components/com_redjuvenil/public/assets/js/master.js"></script>
 <script>
 
 var items_data = []
@@ -221,6 +216,7 @@ function getItem(id){
 
 window.onload = function(){
     //resizeContainer()
+    updateResults('regional',[])
 }
 
 

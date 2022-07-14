@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
-	<name>Red Juvenil Seguros SURA</name>
+	<name>Red Juvenil</name>
 	<creationDate>Julio 2022</creationDate>
 	<author>Virtual Colors S.A.S</author>
 	
@@ -34,7 +34,7 @@
 
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu link='index.php?option=com_redjuvenil'>Red Juvenil Seguros SURA</menu>
+		<menu link='index.php?option=com_redjuvenil'>Red Juvenil</menu>
 		<files folder="admin">
 			<!-- Admin Main File Copy Section -->
 			<filename>controller.php</filename>
