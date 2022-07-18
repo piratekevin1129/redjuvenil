@@ -192,7 +192,7 @@ function buscarResultados(btn){
         $.ajax({
             type:'POST',
             dataType: "jsonp",
-            url:'http://localhost/joomla/index.php?option=com_redjuvenil&task=obtenerDatos',
+            url:'index.php?option=com_redjuvenil&task=obtenerDatos',
             data:{
                 r:regional_txt,
                 d:departamento_txt,

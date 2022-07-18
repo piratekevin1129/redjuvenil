@@ -23,8 +23,8 @@ function unsanitice($text){
 ?>
 
 <!--Jquery-->
-<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>-->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>-->
 
 <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
 
@@ -37,9 +37,9 @@ function unsanitice($text){
 <!--<script src="http://kit.fontawesome.com/a6f44a68f2.js" crossorigin="anonymous"></script>-->
 
 <!--Estilos propios-->
-<link href="http://localhost/joomla/components/com_redjuvenil/public/assets/css/fonts.css" rel="stylesheet" type="text/css" />
-<link href="http://localhost/joomla/components/com_redjuvenil/public/assets/css/master.css" rel="stylesheet" type="text/css" />
-<link href="http://localhost/joomla/components/com_redjuvenil/public/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo JURI::base(); ?>/components/com_redjuvenil/public/assets/css/fonts.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo JURI::base(); ?>/components/com_redjuvenil/public/assets/css/master.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo JURI::base(); ?>/components/com_redjuvenil/public/assets/css/responsive.css" rel="stylesheet" type="text/css" />
 <script>
     function setMinuscula(str){
         var str1 = str.replace(new RegExp('Á','g'),'á')
@@ -283,7 +283,7 @@ function unsanitice($text){
 <br />
 <br />
 
-<script src="http://localhost/joomla/components/com_redjuvenil/public/assets/js/master.js"></script>
+<script src="<?php echo JURI::base(); ?>components/com_redjuvenil/public/assets/js/master.js"></script>
 <script>
 
 var items_data = []
