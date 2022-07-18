@@ -6,13 +6,9 @@ class RedjuvenilController extends JControllerLegacy{
 		$r = checkComillas(JRequest::getVar('r','','post'));
 		$d = checkComillas(JRequest::getVar('d','','post'));
 		$c = checkComillas(JRequest::getVar('c','','post'));
-		$n = checkComillas(JRequest::getVar('n','','post'));
-		
-		$tablename = '#__redjuvenil_data';
-		$titles = array('id','regional','departamento','ciudad','tipo_identificacion','numero_identificacion','razon_social','nombre_comercial','especialidad','categoria','servicio','direccion','complemento_direccion','institucion','telefono','correo','sede_propia','fecha');
 		
 		$model = $this->getModel();
-		$datos = $model->getColegios($tablename,$titles,$r,$d,$c,$n);
+		$datos = $model->getDatos($r,$d,$c);
 
 		$json_text = json_encode($datos, JSON_UNESCAPED_UNICODE);
 		
