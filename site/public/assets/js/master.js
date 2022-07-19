@@ -189,7 +189,7 @@ function buscarResultados(btn){
         getE('dpe-resultados-loader').className = 'dpe-resultados-on'
         getE('dpe-resultados-table').className = 'dpe-resultados-off'
 
-        $.ajax({
+        jQuery.ajax({
             type:'POST',
             dataType: "jsonp",
             url:'index.php?option=com_redjuvenil&task=obtenerDatos',
@@ -260,8 +260,8 @@ function loadResults(){
         getE('dpe-resultados-body').appendChild(div_row)
         
     }
-    $('html, body').animate({
-        scrollTop: $("#dpe-resultados-container").offset().top
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#dpe-resultados-container").offset().top
         //scrollTop: 0
     }, 500);
 }
