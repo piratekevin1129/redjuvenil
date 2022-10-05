@@ -158,10 +158,10 @@ function unsanitice($text){
 
         <div id="dpe-resultados-table" class="dpe-resultados-off">
             <div class="dpe-resultados-header">
-                <div class="dpe-resultados-title">Identificación</div>
-                <div class="dpe-resultados-title">Razón social</div>
-                <div class="dpe-resultados-title">Categoría, servicio</div>
-                <div class="dpe-resultados-title">Servicio Salud</div>
+                <!--<div class="dpe-resultados-title">Identificación</div>-->
+                <div class="dpe-resultados-title">Nombre proveedor</div>
+                <div class="dpe-resultados-title">Servicio</div>
+                <div class="dpe-resultados-title">Especificación del servicio</div>
                 <div class="dpe-resultados-title">Más detalles</div>
             </div>
             <div id="dpe-resultados-body">
@@ -194,7 +194,7 @@ function unsanitice($text){
                     </div>
                     <div class="modal-red-tabla-description"></div>
                 </div>
-                <div class="modal-red-tabla-row">
+                <div class="modal-red-tabla-row modal-red-tabla-row-off">
                     <div class="modal-red-tabla-title">
                         <span></span><div><p>Identificación</p></div>
                     </div>
@@ -254,19 +254,19 @@ function unsanitice($text){
                     </div>
                     <div class="modal-red-tabla-description"></div>
                 </div>
-                <div class="modal-red-tabla-row">
+                <div class="modal-red-tabla-row modal-red-tabla-row-off">
                     <div class="modal-red-tabla-title">
                         <span></span><div><p>Correo Institución</p></div>
                     </div>
                     <div class="modal-red-tabla-description"></div>
                 </div>
-                <div class="modal-red-tabla-row">
+                <div class="modal-red-tabla-row modal-red-tabla-row-off">
                     <div class="modal-red-tabla-title">
                         <span></span><div><p>Ind Sede Propia</p></div>
                     </div>
                     <div class="modal-red-tabla-description"></div>
                 </div>
-                <div class="modal-red-tabla-row">
+                <div class="modal-red-tabla-row modal-red-tabla-row-off">
                     <div class="modal-red-tabla-title">
                         <span></span><div><p>Fecha Alta Proveedor</p></div>
                     </div>
