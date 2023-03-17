@@ -250,7 +250,7 @@ function loadResults(){
         var h = ''
         
         var result_data = global_data[i]
-        h+='<div class="dpe-resultados-col">'+result_data.tipo_identificacion+'-'+result_data.numero_identificacion+'</div>'
+        //h+='<div class="dpe-resultados-col">'+result_data.tipo_identificacion+'-'+result_data.numero_identificacion+'</div>'
         h+='<div class="dpe-resultados-col">'+result_data.razon_social+'</div>'
         h+='<div class="dpe-resultados-col">'+result_data.categoria+'</div>'
         h+='<div class="dpe-resultados-col">'+result_data.servicio+'</div>'
@@ -264,7 +264,9 @@ function loadResults(){
         scrollTop: jQuery("#dpe-resultados-container").offset().top
         //scrollTop: 0
     }, 500);
+    updateHeight()
 }
+
 
 function mostrarMas(id,ind){
     getE('modal-red-tabla').getElementsByClassName('modal-red-tabla-description')[0].innerHTML = global_data[ind].regional
@@ -288,8 +290,12 @@ function mostrarMas(id,ind){
     }
     getE('modal-red-tabla').getElementsByClassName('modal-red-tabla-description')[15].innerHTML = global_data[ind].fecha
 
+
     getE('modal-red').className = 'modal-red-on'
+    //obtener window height
 }
+
+
 
 function unsetModalRed(){
     getE('modal-red').className = 'modal-red-off'
@@ -334,4 +340,14 @@ function parseHtmlEntities(str){
     txta = null
 	return value;
     
+}
+
+
+function updateHeight(){
+    var body = document.body,
+    html = document.documentElement;
+
+    var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+    console.log(height)
+    window.parent.postMessage(height, "*");
 }

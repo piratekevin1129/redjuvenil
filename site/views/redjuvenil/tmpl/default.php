@@ -68,7 +68,7 @@ function unsanitice($text){
                 <div class="dpe-buscador-input" id="regional-field">
                     <div class="dpe-buscador-input-txt">
                         <input class="dpe-buscador-value" type="hidden" value="" id="dpe-regional-value" />
-                        <input id="dpe-regional-value2" value="" placeholder="Selecciona una opción" type="text" maxlength="100" autocomplete="off" onkeyup="buscarItemBuscador(this,'regional')" onfocus="selectItemBuscador(this,'regional')" />
+                        <input id="dpe-regional-value2" value="" placeholder="Seleccione una opción" type="text" maxlength="100" autocomplete="off" onkeyup="buscarItemBuscador(this,'regional')" onfocus="selectItemBuscador(this,'regional')" />
                         <button class="dpe-buscador-input-cancel" id="dpe-regional-input-cancel" onclick="cancelItemBuscador('regional')">
                             <span></span>
                         </button>
@@ -311,6 +311,7 @@ items_data.push({
 })
 <?php }?>
 
+
 function getItem(id){
     var ind = -1
     for(k = 0;k<items_data.length;k++){
@@ -324,7 +325,7 @@ function getItem(id){
 window.onload = function(){
     //resizeContainer()
     updateResults('regional',[])
+    updateHeight()
 }
-
 
 </script>

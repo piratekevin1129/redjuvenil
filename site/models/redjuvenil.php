@@ -6,6 +6,22 @@ jimport('joomla.application.component.modelitem');
 
 //definimos la clase con el nombre del componente con la primera en mayuscula
 class RedjuvenilModelRedjuvenil extends JModelItem{
+
+	public function getAll(){
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+
+		$query->select($db->quoteName(array('id','regional','departamento','ciudad','tipo_identificacion','numero_identificacion','razon_social','nombre_comercial','especialidad','categoria','servicio','direccion','complemento_direccion','institucion','telefono','correo','sede_propia','fecha')));
+		$query->from($db->quoteName('#__redjuvenil_data'));
+        		
+		//$query->order('id ASC');
+
+		$db->setQuery($query);
+		$items = $db->loadObjectList();
+
+		return $items;
+	}
+
     public function getDatos($r,$d,$c){
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);

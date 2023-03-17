@@ -14,6 +14,16 @@ class RedjuvenilController extends JControllerLegacy{
 		
 		exit($json_text);
 	}
+
+	public function datosIniciales(){
+
+		$model = $this->getModel();
+		$datos = $model->getAll();
+
+		$json_text = json_encode($datos, JSON_UNESCAPED_UNICODE);
+		
+		exit($json_text);
+	}
 }
 
 function checkComillas($cadeneta){
